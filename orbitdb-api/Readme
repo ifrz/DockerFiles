@@ -1,0 +1,9 @@
+Fully functional container with an API Rest for orbitdb
+
+More info about API calls here https://github.com/phillmac/orbit-db-api
+
+After build the image run something like that
+
+docker run -it --name orbitdb_node -v $PWD:/home/node/orbitdb/ -v $PWD:/root/.ipfs -p 3000:3000 -p 4001:4001 -p 127.0.0.1:8080:8080 -p 127.0.0.1:5001:5001 orbitapi:latest /home/node/init.sh
+
+If you want more than one container running in the host change first (second is inside the container) port addresses in order to avoid 'port already in use'
